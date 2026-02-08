@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Your Ink | Text-to-Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="logo">Name Your <span>Ink</span></h1>
+            <p class="subtitle">Turn your words into artistic masterpieces in seconds.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-group">
+                    <input type="text" id="user-text" placeholder="Type your message..." maxlength="30" autocomplete="off">
+                    <label for="user-text">Your Message</label>
+                </div>
+            </section>
+
+            <section class="style-section">
+                <h2>Pick Your Vibe</h2>
+                <div class="style-grid" id="style-grid">
+                    <!-- Style cards will be injected here by JS -->
+                </div>
+            </section>
+
+            <section class="action-section">
+                <button id="create-btn" class="primary-btn">Create Magic</button>
+            </section>
+
+            <section id="preview-section" class="preview-section hidden">
+                <div class="preview-container">
+                    <div class="loader hidden" id="loader"></div>
+                    <img id="result-img" src="" alt="Generated Ink">
+                </div>
+                <div class="preview-actions">
+                    <button id="download-btn" class="secondary-btn">Download PNG</button>
+                    <button id="copy-btn" class="secondary-btn">Copy Image</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Name Your Ink. Powered by TextStudio.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
