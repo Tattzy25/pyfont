@@ -1,1 +1,13 @@
 .vercel
+.env*.local
+EnvironmentVariables.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+
+# Local output
+out/

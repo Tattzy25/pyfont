@@ -4,9 +4,6 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 
 import requests
-
-
-API_KEY = "5lULqIeRUNIIzKNyp6AVtfkpfQGVxOSU"
 API_URL = "https://api.textstudio.com/generate"
 
 
